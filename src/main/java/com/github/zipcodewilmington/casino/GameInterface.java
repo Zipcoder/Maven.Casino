@@ -1,7 +1,8 @@
 package com.github.zipcodewilmington.casino;
 
 /**
- * Created by leon on 7/21/2020.
+ * Author: Nathan
+ * Date: 7/12/21
  */
 public interface GameInterface extends Runnable {
     /**
@@ -20,4 +21,21 @@ public interface GameInterface extends Runnable {
      * specifies how the game will run
      */
     void run();
+
+    /**
+     * Calculate player's winning payout amount of bet x multiplier
+     * @return (double) amount of money winnings
+     */
+    Integer calculateWinnings(Integer multiplier, Integer betAmount);
+
+    /**
+     * Subtract the bet amount from player's balance
+     */
+    void subtractBetFromBalance(Integer betAmount);
+
+    /**
+     * Add winnings amount to player's balance
+     */
+    void addMoneyToBalance(PlayerInterface Player, Integer winnings);
+
 }
