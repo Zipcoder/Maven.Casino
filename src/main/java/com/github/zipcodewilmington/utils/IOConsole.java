@@ -66,6 +66,16 @@ public class IOConsole {
     }
 
     public Integer getIntegerInput(String prompt, Object... args) {
-        return getLongInput(prompt, args).intValue();
+        Integer input = getLongInput(prompt, args).intValue();
+        //this.newLine();
+        return input;
+    }
+
+    public void newLine(){
+        this.output.println();
+    }
+
+    public void pressEnterToProceed(){
+        this.input.nextLine();
     }
 }
