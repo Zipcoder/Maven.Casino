@@ -16,8 +16,17 @@ public interface GameInterface extends Runnable {
      */
     void remove(PlayerInterface player);
 
-    /**
-     * specifies how the game will run
-     */
-    void run();
+
+    int getNumberOfPlayers();
+
+    boolean playerWins();  //player or house wins
+
+
+    boolean playerLoses(); //player or house loses
+
+    void clearGame(); //Garbage collection, clearing the balance of wagers and setting players to null
+
+
+
+
 }
